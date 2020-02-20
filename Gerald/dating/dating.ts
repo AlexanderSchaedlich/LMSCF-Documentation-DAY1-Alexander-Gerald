@@ -17,6 +17,7 @@ class Profile{
 		this.img = img;
 	}
 }
+
 let Jenny =new Profile ("Jenny",25,"Vienna", "Yoga,coffee,ballons","Enya","Live,lough,learn","img/test.jpg",true);
 let John =new Profile ("John",22,"London", "soccer","Shakira","Love soccer balls","img/test.jpg",false);
 let Max =new Profile ("Max",26,"Paris", "party","David Guetta","I'm too sexy for this shirt","img/test.jpg",false);
