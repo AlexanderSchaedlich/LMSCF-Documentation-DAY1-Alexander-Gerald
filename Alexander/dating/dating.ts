@@ -7,7 +7,8 @@ class Profile{
 	music = "";
 	motto = "";
 	img = "";
-	constructor(name:string, age:number, location:string, hobbies:string, music:string, motto:string, img:string){
+	like = false;
+	constructor(name:string, age:number, location:string, hobbies:string, music:string, motto:string, img:string, like:boolean){
 		this.name = name;
 		this.age = age;
 		this.location = location;
@@ -15,5 +16,6 @@ class Profile{
 		this.music = music;
 		this.motto = motto;
 		this.img = img;
+		this.like = like;
 	}
 }
