@@ -71,9 +71,10 @@ console.log(hearts)
 for(let i = 0; i < hearts.length; i++){
 	$(".heart")[i].addEventListener("click", function(){
 		console.log("success")
-		$("#favourites").append(`
-			<div class="border">
-				<img src="${arrayOfProfiles[i].img}" class="w-100">
+		$("#cards")[i].children(2).html("&#x2764;");
+			$("#favourites").append(`
+			<div class="border" class="w-100 col-6">
+				<img src="${arrayOfProfiles[i].img}">
 				<div>
 					<p class="m-0">Name: ${arrayOfProfiles[i].name}</p>
 					<p class="m-0">Age: ${arrayOfProfiles[i].age}</p>
