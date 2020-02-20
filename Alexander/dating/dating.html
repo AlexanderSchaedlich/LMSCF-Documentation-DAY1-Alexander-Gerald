@@ -7,6 +7,22 @@
 		.navbar {
 			background-color: #948DC2;
 		}
+		* {
+			margin: 0;
+			padding: 0;
+			/* border: black solid 1px; */
+		}
+		.card {
+			width: 20%;
+			margin: 20px;
+		}
+		.heart {
+			width: 50px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: black;
+		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<title>dating site</title>
@@ -33,9 +49,15 @@
 	</header>
 
 	<main>
-		<div id="cards">
+		<div class="row">
+			<div id="cards" class="col-8 d-flex flex-wrap">
 			
+			</div>
+			<div id="selectedCard" class="col-4">
+				
+			</div>
 		</div>
+		
 	</main>
 
 	<footer>

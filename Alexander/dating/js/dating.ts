@@ -38,9 +38,30 @@ arrayOfProfiles.push(Alex);
 
 for(let value of arrayOfProfiles){
 	$("#cards").append(`
-		<div>
-			<img src="${value.img}">
+		<div class="card border">
+			<img src="${value.img}" class="w-100">
+			<div class="heart">&#x1F5A4;</div>
 			<div><p>${value.motto}</p></div>
 		</div>
 	`)
 }
+let cards = $(".card");
+for(let i = 0; i < cards.length; i++){
+	$(".card")[i].addEventListener("click", function(){
+		$("#selectedCard").html("");
+		$("#selectedCard").append(`
+			<div class="border">
+				<img src="${arrayOfProfiles[i].img}" class="w-100">
+				<div>
+					<p class="m-0">Name: ${arrayOfProfiles[i].name}</p>
+					<p class="m-0">Age: ${arrayOfProfiles[i].age}</p>
+					<p class="m-0">Location: ${arrayOfProfiles[i].location}</p>
+					<p class="m-0">Hobbies: ${arrayOfProfiles[i].hobbies}</p>
+					<p class="m-0">Favourite Music: ${arrayOfProfiles[i].music}</p>
+				</div>
+			</div>
+		`);
+	});
+}
+
+// &#x2764;

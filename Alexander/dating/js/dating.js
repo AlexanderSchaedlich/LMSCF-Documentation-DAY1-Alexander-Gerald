@@ -38,5 +38,16 @@ arrayOfProfiles.push(Dave);
 arrayOfProfiles.push(Alex);
 for (var _i = 0, arrayOfProfiles_1 = arrayOfProfiles; _i < arrayOfProfiles_1.length; _i++) {
     var value = arrayOfProfiles_1[_i];
-    $("#cards").append("\n\t\t<div>\n\t\t\t<img src=\"" + value.img + "\">\n\t\t\t<div><p>" + value.motto + "</p></div>\n\t\t</div>\n\t");
+    $("#cards").append("\n\t\t<div class=\"card border\">\n\t\t\t<img src=\"" + value.img + "\" class=\"w-100\">\n\t\t\t<div class=\"heart\">&#x1F5A4;</div>\n\t\t\t<div><p>" + value.motto + "</p></div>\n\t\t</div>\n\t");
 }
+var cards = $(".card");
+var _loop_1 = function (i) {
+    $(".card")[i].addEventListener("click", function () {
+        $("#selectedCard").html("");
+        $("#selectedCard").append("\n\t\t\t<div class=\"border\">\n\t\t\t\t<img src=\"" + arrayOfProfiles[i].img + "\" class=\"w-100\">\n\t\t\t\t<div>\n\t\t\t\t\t<p class=\"m-0\">Name: " + arrayOfProfiles[i].name + "</p>\n\t\t\t\t\t<p class=\"m-0\">Age: " + arrayOfProfiles[i].age + "</p>\n\t\t\t\t\t<p class=\"m-0\">Location: " + arrayOfProfiles[i].location + "</p>\n\t\t\t\t\t<p class=\"m-0\">Hobbies: " + arrayOfProfiles[i].hobbies + "</p>\n\t\t\t\t\t<p class=\"m-0\">Favourite Music: " + arrayOfProfiles[i].music + "</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t");
+    });
+};
+for (var i = 0; i < cards.length; i++) {
+    _loop_1(i);
+}
+// &#x2764;
