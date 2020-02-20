@@ -38,7 +38,6 @@ arrayOfProfiles.push(Jane);
 arrayOfProfiles.push(Dave);
 arrayOfProfiles.push(Alex);
 
-console.table(arrayOfProfiles);
 
 for(let value of arrayOfProfiles){
 	$("#cards").append(`
@@ -71,11 +70,10 @@ for(let i = 0; i < cards.length; i++){
 
 // &#x2764;
 let hearts = $(".heart");
-console.log(hearts)
 for(let i = 0; i < hearts.length; i++){
 	$(".heart")[i].addEventListener("click", function(){
-		console.log("success")
-		$("#cards")[i].children(2).html("&#x2764;");
+		$(this).html("&#x2764")
+		
 			$("#favourites").append(`
 			<div class="border" class="w-100 col-6">
 				<img src="${arrayOfProfiles[i].img}">

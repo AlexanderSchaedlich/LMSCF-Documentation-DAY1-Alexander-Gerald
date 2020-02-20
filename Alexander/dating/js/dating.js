@@ -36,7 +36,6 @@ arrayOfProfiles.push(Julia);
 arrayOfProfiles.push(Jane);
 arrayOfProfiles.push(Dave);
 arrayOfProfiles.push(Alex);
-console.table(arrayOfProfiles);
 for (var _i = 0, arrayOfProfiles_1 = arrayOfProfiles; _i < arrayOfProfiles_1.length; _i++) {
     var value = arrayOfProfiles_1[_i];
     $("#cards").append("\n\t\t<div class=\"card border\">\n\t\t\t<img src=\"" + value.img + "\" class=\"w-100\">\n\t\t\t<div class=\"heart\">&#x1F5A4;</div>\n\t\t\t<div><p>" + value.motto + "</p></div>\n\t\t</div>\n\t");
@@ -53,11 +52,9 @@ for (var i = 0; i < cards.length; i++) {
 }
 // &#x2764;
 var hearts = $(".heart");
-console.log(hearts);
 var _loop_2 = function (i) {
     $(".heart")[i].addEventListener("click", function () {
-        console.log("success");
-        $("#cards")[i].children(2).html("&#x2764;");
+        $(this).html("&#x2764");
         $("#favourites").append("\n\t\t\t<div class=\"border\" class=\"w-100 col-6\">\n\t\t\t\t<img src=\"" + arrayOfProfiles[i].img + "\">\n\t\t\t\t<div>\n\t\t\t\t\t<p class=\"m-0\">Name: " + arrayOfProfiles[i].name + "</p>\n\t\t\t\t\t<p class=\"m-0\">Age: " + arrayOfProfiles[i].age + "</p>\n\t\t\t\t\t<p class=\"m-0\">Location: " + arrayOfProfiles[i].location + "</p>\n\t\t\t\t\t<p class=\"m-0\">Hobbies: " + arrayOfProfiles[i].hobbies + "</p>\n\t\t\t\t\t<p class=\"m-0\">Favourite Music: " + arrayOfProfiles[i].music + "</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t");
     });
 };
