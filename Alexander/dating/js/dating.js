@@ -1,0 +1,42 @@
+var Profile = /** @class */ (function () {
+    function Profile(name, age, location, hobbies, music, motto, img, like) {
+        this.name = "";
+        this.age = 0;
+        this.location = "";
+        this.hobbies = "";
+        this.music = "";
+        this.motto = "";
+        this.img = "";
+        this.like = false;
+        this.name = name;
+        this.age = age;
+        this.location = location;
+        this.hobbies = hobbies;
+        this.music = music;
+        this.motto = motto;
+        this.img = img;
+        this.like = like;
+    }
+    return Profile;
+}());
+var Jenny = new Profile("Jenny", 25, "Vienna", "Yoga,coffee,ballons", "Enya", "Live,lough,learn", "img/test.jpg", true);
+var John = new Profile("John", 22, "London", "soccer", "Shakira", "Love soccer balls", "img/test.jpg", false);
+var Max = new Profile("Max", 26, "Paris", "party", "David Guetta", "I'm too sexy for this shirt", "img/test.jpg", false);
+var Sandra = new Profile("Sandra", 20, "Berlin", "Yoga,coffee,ballons", "Linkin Prk", "I'm a pastafarian", "img/test.jpg", false);
+var Julia = new Profile("Julia", 28, "Vienna", "Yoga,coffee,ballons", "Shakira", "Carpe Diem", "img/test.jpg", false);
+var Jane = new Profile("Jane", 21, "Rome", "Yoga,coffee,ballons", "Coldplay", "People I like: 1.Cats", "img/test.jpg", false);
+var Dave = new Profile("Dave", 37, "Beavertown", "Beer,beer,beer", "Britney Spears", "See you next beer", "img/test.jpg", true);
+var Alex = new Profile("Alex", 32, "New York", "Yoga,coffee,ballons", "Enya", "Date me!! ...please...", "img/test.jpg", false);
+var arrayOfProfiles = [];
+arrayOfProfiles.push(Jenny);
+arrayOfProfiles.push(John);
+arrayOfProfiles.push(Max);
+arrayOfProfiles.push(Sandra);
+arrayOfProfiles.push(Julia);
+arrayOfProfiles.push(Jane);
+arrayOfProfiles.push(Dave);
+arrayOfProfiles.push(Alex);
+for (var _i = 0, arrayOfProfiles_1 = arrayOfProfiles; _i < arrayOfProfiles_1.length; _i++) {
+    var value = arrayOfProfiles_1[_i];
+    $("#cards").append("\n\t\t<div>\n\t\t\t<img src=\"" + value.img + "\">\n\t\t\t<div><p>" + value.motto + "</p></div>\n\t\t</div>\n\t");
+}
