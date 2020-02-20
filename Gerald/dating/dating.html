@@ -2,7 +2,28 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<title>dating site</title>
+	<style type="text/css" media="screen">
+		.heart {
+  background-color: red;
+  height: 30px;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+.heart:before {
+  top: -15px;
+  left: 0;
+},
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+	</style>
 </head>
 <body>
 	<header>
@@ -10,6 +31,16 @@
 	</header>
 
 	<main>
+		<div class="heart"></div>
+
+		<button type="button" class="button"></button>
+
+		<div>
+			<i class="fas fa-heart"></i>
+		</div>
+		<i class="far fa-heart"></i>
+		<p>I will display &#x2660;<p>
+			<p>	&#x2764;</p>
 		
 	</main>
 	

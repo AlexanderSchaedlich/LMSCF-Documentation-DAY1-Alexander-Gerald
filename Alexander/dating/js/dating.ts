@@ -64,4 +64,24 @@ for(let i = 0; i < cards.length; i++){
 	});
 }
 
+
 // &#x2764;
+let hearts = $(".heart");
+console.log(hearts)
+for(let i = 0; i < hearts.length; i++){
+	$(".heart")[i].addEventListener("click", function(){
+		console.log("success")
+		$("#favourites").append(`
+			<div class="border">
+				<img src="${arrayOfProfiles[i].img}" class="w-100">
+				<div>
+					<p class="m-0">Name: ${arrayOfProfiles[i].name}</p>
+					<p class="m-0">Age: ${arrayOfProfiles[i].age}</p>
+					<p class="m-0">Location: ${arrayOfProfiles[i].location}</p>
+					<p class="m-0">Hobbies: ${arrayOfProfiles[i].hobbies}</p>
+					<p class="m-0">Favourite Music: ${arrayOfProfiles[i].music}</p>
+				</div>
+			</div>
+		`);
+	});
+}
