@@ -36,6 +36,7 @@ arrayOfProfiles.push(Julia);
 arrayOfProfiles.push(Jane);
 arrayOfProfiles.push(Dave);
 arrayOfProfiles.push(Alex);
+console.table(arrayOfProfiles);
 for (var _i = 0, arrayOfProfiles_1 = arrayOfProfiles; _i < arrayOfProfiles_1.length; _i++) {
     var value = arrayOfProfiles_1[_i];
     $("#cards").append("\n\t\t<div class=\"card border\">\n\t\t\t<img src=\"" + value.img + "\" class=\"w-100\">\n\t\t\t<div class=\"heart\">&#x1F5A4;</div>\n\t\t\t<div><p>" + value.motto + "</p></div>\n\t\t</div>\n\t");

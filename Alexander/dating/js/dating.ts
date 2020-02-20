@@ -1,3 +1,4 @@
+
 class Profile{
 	name = "";
 	age = 0;
@@ -26,7 +27,8 @@ let Julia =new Profile ("Julia",28,"Vienna", "Yoga,coffee,ballons","Shakira","Ca
 let Jane =new Profile ("Jane",21,"Rome", "Yoga,coffee,ballons","Coldplay","People I like: 1.Cats","img/test.jpg",false);
 let Dave =new Profile ("Dave",37,"Beavertown", "Beer,beer,beer","Britney Spears","See you next beer","img/test.jpg",true);
 let Alex =new Profile ("Alex",32,"New York", "Yoga,coffee,ballons","Enya","Date me!! ...please...","img/test.jpg",false);
-let arrayOfProfiles:Array<object> = [];
+
+let arrayOfProfiles:Array<any> = [];
 arrayOfProfiles.push(Jenny);
 arrayOfProfiles.push(John);
 arrayOfProfiles.push(Max);
@@ -35,6 +37,8 @@ arrayOfProfiles.push(Julia);
 arrayOfProfiles.push(Jane);
 arrayOfProfiles.push(Dave);
 arrayOfProfiles.push(Alex);
+
+console.table(arrayOfProfiles);
 
 for(let value of arrayOfProfiles){
 	$("#cards").append(`
@@ -86,3 +90,4 @@ for(let i = 0; i < hearts.length; i++){
 		`);
 	});
 }
+
